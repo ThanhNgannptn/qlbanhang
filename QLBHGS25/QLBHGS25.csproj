@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C02F2C68-F2D9-46C9-996B-B38842E3A7DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLBHGS25</RootNamespace>
+    <AssemblyName>QLBHGS25</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmCTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCTHD.Designer.cs">
+      <DependentUpon>FrmCTHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDanhmucSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDanhmucSP.Designer.cs">
+      <DependentUpon>FrmDanhmucSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDanhmucSPKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDanhmucSPKhach.Designer.cs">
+      <DependentUpon>FrmDanhmucSPKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDMNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDMNCC.Designer.cs">
+      <DependentUpon>FrmDMNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDMNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDMNV.Designer.cs">
+      <DependentUpon>FrmDMNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiaoDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiaoDien.Designer.cs">
+      <DependentUpon>FrmGiaoDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDon.Designer.cs">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKhachHang.Designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainNV.Designer.cs">
+      <DependentUpon>FrmMainNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainQL.Designer.cs">
+      <DependentUpon>FrmMainQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPhieuThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhieuThanhToan.Designer.cs">
+      <DependentUpon>FrmPhieuThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThayDoiInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThayDoiInf.Designer.cs">
+      <DependentUpon>FrmThayDoiInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketnoicthd.cs" />
+    <Compile Include="ketnoiDMSP.cs" />
+    <Compile Include="ketnoihd.cs" />
+    <Compile Include="ketnoikh.cs" />
+    <Compile Include="ketnoincc.cs" />
+    <Compile Include="ketnoinv.cs" />
+    <Compile Include="ketnoiqlnhap.cs" />
+    <Compile Include="ketnoitt.cs" />
+    <Compile Include="ketnoiusers.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLBHGS25DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHGS25DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHGS25DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQLNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLNhap.Designer.cs">
+      <DependentUpon>FrmQLNhap.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmCTHD.resx">
+      <DependentUpon>FrmCTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDanhmucSP.resx">
+      <DependentUpon>FrmDanhmucSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDanhmucSPKhach.resx">
+      <DependentUpon>FrmDanhmucSPKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDMNCC.resx">
+      <DependentUpon>FrmDMNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDMNV.resx">
+      <DependentUpon>FrmDMNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiaoDien.resx">
+      <DependentUpon>FrmGiaoDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDon.resx">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainNV.resx">
+      <DependentUpon>FrmMainNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainQL.resx">
+      <DependentUpon>FrmMainQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhieuThanhToan.resx">
+      <DependentUpon>FrmPhieuThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThayDoiInf.resx">
+      <DependentUpon>FrmThayDoiInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmQLNhap.resx">
+      <DependentUpon>FrmQLNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLBHGS25DataSet.xsc">
+      <DependentUpon>QLBHGS25DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet.xss">
+      <DependentUpon>QLBHGS25DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet1.xsc">
+      <DependentUpon>QLBHGS25DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet1.xss">
+      <DependentUpon>QLBHGS25DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet10.xsc">
+      <DependentUpon>QLBHGS25DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet10.xss">
+      <DependentUpon>QLBHGS25DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet11.xsc">
+      <DependentUpon>QLBHGS25DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet11.xss">
+      <DependentUpon>QLBHGS25DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet12.xsc">
+      <DependentUpon>QLBHGS25DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet12.xss">
+      <DependentUpon>QLBHGS25DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet13.xsc">
+      <DependentUpon>QLBHGS25DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet13.xss">
+      <DependentUpon>QLBHGS25DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet14.xsc">
+      <DependentUpon>QLBHGS25DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet14.xss">
+      <DependentUpon>QLBHGS25DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet15.xsc">
+      <DependentUpon>QLBHGS25DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet15.xss">
+      <DependentUpon>QLBHGS25DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet16.xsc">
+      <DependentUpon>QLBHGS25DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet16.xss">
+      <DependentUpon>QLBHGS25DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet17.xsc">
+      <DependentUpon>QLBHGS25DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet17.xss">
+      <DependentUpon>QLBHGS25DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet18.xsc">
+      <DependentUpon>QLBHGS25DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet18.xss">
+      <DependentUpon>QLBHGS25DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet19.xsc">
+      <DependentUpon>QLBHGS25DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet19.xss">
+      <DependentUpon>QLBHGS25DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet2.xsc">
+      <DependentUpon>QLBHGS25DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet2.xss">
+      <DependentUpon>QLBHGS25DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet20.xsc">
+      <DependentUpon>QLBHGS25DataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet20.xss">
+      <DependentUpon>QLBHGS25DataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet21.xsc">
+      <DependentUpon>QLBHGS25DataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet21.xss">
+      <DependentUpon>QLBHGS25DataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet22.xsc">
+      <DependentUpon>QLBHGS25DataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet22.xss">
+      <DependentUpon>QLBHGS25DataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet23.xsc">
+      <DependentUpon>QLBHGS25DataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet23.xss">
+      <DependentUpon>QLBHGS25DataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet24.xsc">
+      <DependentUpon>QLBHGS25DataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet24.xss">
+      <DependentUpon>QLBHGS25DataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet25.xsc">
+      <DependentUpon>QLBHGS25DataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet25.xss">
+      <DependentUpon>QLBHGS25DataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet26.xsc">
+      <DependentUpon>QLBHGS25DataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet26.xss">
+      <DependentUpon>QLBHGS25DataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet27.xsc">
+      <DependentUpon>QLBHGS25DataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet27.xss">
+      <DependentUpon>QLBHGS25DataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet28.xsc">
+      <DependentUpon>QLBHGS25DataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet28.xss">
+      <DependentUpon>QLBHGS25DataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet29.xsc">
+      <DependentUpon>QLBHGS25DataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet29.xss">
+      <DependentUpon>QLBHGS25DataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet3.xsc">
+      <DependentUpon>QLBHGS25DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet3.xss">
+      <DependentUpon>QLBHGS25DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet30.xsc">
+      <DependentUpon>QLBHGS25DataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet30.xss">
+      <DependentUpon>QLBHGS25DataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet31.xsc">
+      <DependentUpon>QLBHGS25DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet31.xss">
+      <DependentUpon>QLBHGS25DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet32.xsc">
+      <DependentUpon>QLBHGS25DataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet32.xss">
+      <DependentUpon>QLBHGS25DataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet33.xsc">
+      <DependentUpon>QLBHGS25DataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet33.xss">
+      <DependentUpon>QLBHGS25DataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet34.xsc">
+      <DependentUpon>QLBHGS25DataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet34.xss">
+      <DependentUpon>QLBHGS25DataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet35.xsc">
+      <DependentUpon>QLBHGS25DataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet35.xss">
+      <DependentUpon>QLBHGS25DataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet36.xsc">
+      <DependentUpon>QLBHGS25DataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet36.xss">
+      <DependentUpon>QLBHGS25DataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet37.xsc">
+      <DependentUpon>QLBHGS25DataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet37.xss">
+      <DependentUpon>QLBHGS25DataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet38.xsc">
+      <DependentUpon>QLBHGS25DataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet38.xss">
+      <DependentUpon>QLBHGS25DataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet4.xsc">
+      <DependentUpon>QLBHGS25DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet4.xss">
+      <DependentUpon>QLBHGS25DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet5.xsc">
+      <DependentUpon>QLBHGS25DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet5.xss">
+      <DependentUpon>QLBHGS25DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet6.xsc">
+      <DependentUpon>QLBHGS25DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet6.xss">
+      <DependentUpon>QLBHGS25DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet7.xsc">
+      <DependentUpon>QLBHGS25DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet7.xss">
+      <DependentUpon>QLBHGS25DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet8.xsc">
+      <DependentUpon>QLBHGS25DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet8.xss">
+      <DependentUpon>QLBHGS25DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet9.xsc">
+      <DependentUpon>QLBHGS25DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHGS25DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHGS25DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHGS25DataSet9.xss">
+      <DependentUpon>QLBHGS25DataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\272456.png" />
+    <Content Include="Images\777820.png" />
+    <Content Include="Images\84205_save_512x512.png" />
+    <Content Include="Images\ad69656a49f922fe0ac6a329451fbb2c.ico" />
+    <Content Include="Images\btt.jpg" />
+    <Content Include="Images\bun.jpg" />
+    <Content Include="Images\c.jpg" />
+    <Content Include="Images\chao.jpg" />
+    <Content Include="Images\chua.jpg" />
+    <Content Include="Images\clear.jpg" />
+    <Content Include="Images\default_user_icon.ico" />
+    <Content Include="Images\denhat.jpg" />
+    <Content Include="Images\dove.jpg" />
+    <Content Include="Images\eye.jpg" />
+    <Content Include="Images\gao.jpg" />
+    <Content Include="Images\GS25-Logo-1024x353.ico" />
+    <Content Include="Images\head.jpg" />
+    <Content Include="Images\hh.jpg" />
+    <Content Include="Images\imagechoose.jpg" />
+    <Content Include="Images\kit.jpg" />
+    <Content Include="Images\lovepik-magnifier-png-image_401703451_wh860.png" />
+    <Content Include="Images\ly.jpg" />
+    <Content Include="Images\mi.jpg" />
+    <Content Include="Images\nhap-kho-hang-hoa-300x169.ico" />
+    <Content Include="Images\pepsi.jpg" />
+    <Content Include="Images\png-clipart-computer-icons-online-shopping-shopping-cart-service-shopping-cart-icon-text-service-thumbnail.png" />
+    <Content Include="Images\pngtree-add-icon-isolated-on-abstract-background-png-image_5081419.jpg" />
+    <Content Include="Images\ps.jpg" />
+    <Content Include="Images\reload.jpg" />
+    <Content Include="Images\rsz_1dove.jpg" />
+    <Content Include="Images\shopping-cart.ico" />
+    <Content Include="Images\single_user.png" />
+    <Content Include="Images\siu.jpg" />
+    <Content Include="Images\so.jpg" />
+    <Content Include="Images\sua.jpg" />
+    <Content Include="Images\tay.jpg" />
+    <Content Include="Images\th %281%29.jpg" />
+    <Content Include="Images\th %282%29.jpg" />
+    <Content Include="Images\th %283%29.jpg" />
+    <Content Include="Images\th %284%29.jpg" />
+    <Content Include="Images\th-_11_.ico" />
+    <Content Include="Images\th-_12_.ico" />
+    <Content Include="Images\TrashIt_icon_trnspt.png" />
+    <Content Include="Images\u.jpg" />
+    <Content Include="Images\uo.jpg" />
+    <Content Include="Images\va.jpg" />
+    <Content Include="Images\xa.jpg" />
+    <Content Include="Images\xad.jpg" />
+    <Content Include="Images\z\nhap-kho-hang-hoa-300x169.ico" />
+    <Content Include="Images\z\qlph %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
